@@ -1,0 +1,53 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-image: url(https://img.freepik.com/fotos-premium/fundo-verde-textura-velha-parede-de-concreto-verde-fundo-grunge-padrao-abstrato_362376-532.jpg?w=2000);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+
+    height: 100vh;
+    /* width: 98%; */
+    /* overflow: hidden; */
+    object-fit: cover;
+
+    color: white;
+    text-align: center;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 2em
+}
+
+h1 {
+    color: goldenrod;
+    padding: 10px;
+}
+p{
+    padding: 10px;
+}
+
+#messageEl {
+    font-style: italic;
+}
+
+button {
+    background-color: goldenrod;
+
+    color: darkgreen;
+    font-weight: bold;
+    font-size: .7em;
+
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    width: 180px;
+    margin-bottom: 10px;
+}
+
+@media  (max-width:325px) {
+    body{
+        font-size:1.8em
+    }
+}
