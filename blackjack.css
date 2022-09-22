@@ -54,6 +54,10 @@ button.betBtn{
     color: white;
 }
 
+.hide{
+    display: none;
+}
+
 .add5{
     background-color: green;
 }
