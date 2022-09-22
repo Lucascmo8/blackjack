@@ -37,7 +37,7 @@ let betFirst = false
 
 /*informações do jogador*/
 let player = {
-    name: "Lucas", //prompt(`what's your name?`),
+    name: prompt(`what's your name?`),
     chips: 200,
 }
 
