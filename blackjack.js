@@ -1,3 +1,4 @@
+/*Variaveis Gerais*/
 let cards = []
 let sum = 0
 let cardsBot = []
@@ -51,6 +52,7 @@ playerEl.textContent = `${player.name}: $${player.chips}`
 
 let playBtn = document.querySelector("#playBtn").addEventListener("click", startGame)
 
+/*sorteio das cartas*/
 function getRandomCard() {
     let randomCard = Math.floor(Math.random() * 13) + 1
     if (randomCard > 10) {
@@ -62,6 +64,7 @@ function getRandomCard() {
     }
 }
 
+/*inicio do jogo*/
 function startGame() {
     if (betFirst == false) {
         alert(`bet first...`)
@@ -84,6 +87,7 @@ function startGame() {
         }
     }
 }
+
 
 function renderGame() {
     cardsEl.textContent = `Cards: `
@@ -108,6 +112,7 @@ function renderGame() {
     messageEl.textContent = message
 }
 
+/*Função de nova Carta*/
 let newCard = document.querySelector("#newCard").addEventListener("click", function addCard() {
     if (cards.length == 0) {
         alert(`Start the Game`)
@@ -121,6 +126,7 @@ let newCard = document.querySelector("#newCard").addEventListener("click", funct
     }
 })
 
+/*Limpa as mãos */
 function clear() {
     let sumEl = document.querySelector("#sumEl")
     let cardsEl = document.querySelector("#cardsEl")
@@ -203,6 +209,7 @@ function bet() {
 
 }
 
+/*Finalização dos jogos*/
 function wonGame() {
     player.chips += betValue *2
     
@@ -231,7 +238,7 @@ function loseGame() {
     gameFinished = true
 }
 
-
+/*Mostrar e esconder botões*/
 function fdone() {
     if (gameStarted == false) {
         alert(`Start the game`)
