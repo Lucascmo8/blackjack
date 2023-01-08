@@ -2,7 +2,7 @@
 let cards = []
 let sum = 0
 let cardsBot = []
-let sumBot
+let sumBot = 0
 let hasBlackJack = false
 let isAlive = true
 let message = ""
@@ -38,11 +38,11 @@ let betFirst = false
 
 /*informações do jogador*/
 let player = {
-    name: prompt(`what's your name?`),
+    name:prompt(`what's your name?`),
     chips: 200,
 }
 
-if (player.name == "") {
+if (player.name == "" || player.name == null) {
     player.name = "Player"
 }
 
@@ -205,6 +205,7 @@ function bet() {
         gameStarted = false
         fbet()
         clear()
+        removeDisableMainBtns()
     }
 
 }
@@ -239,6 +240,14 @@ function loseGame() {
 }
 
 /*Mostrar e esconder botões*/
+function removeDisableMainBtns(){
+    mainBtns.forEach(btn => btn.classList.remove("disable"))
+}
+
+function addDisableMainBtns(){
+    mainBtns.forEach(btn => btn.classList.add("disable"))
+}
+
 function fdone() {
     if (gameStarted == false) {
         alert(`Start the game`)
@@ -249,6 +258,8 @@ function fdone() {
         doneBtn.classList.add("hide")
 
         bot()
+
+        addDisableMainBtns()
     }
 }
 
@@ -258,3 +269,7 @@ function fbet() {
     betBtn.classList.add("hide")
     doneBtn.classList.remove("hide")
 }
+
+let mainBtns = document.querySelectorAll("[data-mainBtn]")
+
+

@@ -79,3 +79,9 @@ button.betBtn{
         font-size:1.8em
     }
 }
+
+.disable{
+    background-color: gray;
+    color: darkgray;
+    cursor: not-allowed;
+}
